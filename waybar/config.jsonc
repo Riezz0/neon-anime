@@ -1,0 +1,69 @@
+//General Settings///////////////////////////////////////////////////////////////////////////////////////|
+{"height": 30, "spacing": 4,                                                                        /////|  
+"margin-top": 5,                                                                                    /////|
+"margin-left": 5,                                                                                   /////|
+"margin-right": 5,                                                                                  /////|
+/////////////////////////////////////////////////////////////////////////////////////////////////////////|
+
+//Modules Alignment//////////////////////////////////////////////////////////////////////////////////////|
+"modules-left": [],
+
+"modules-center": [
+"hyprland/workspaces"],
+
+"modules-right": [
+"pulseaudio",
+"network",
+"custom/spacer1",
+"clock",
+"tray"],
+//////////////////////////////////////////////////////////////////////////////////////////////////////////|
+
+//Workspaces//////////////////////////////////////////////////////////////////////////////////////////////|
+"hyprland/workspaces": {                                                                             /////| 
+"persistent-workspaces": {"*": 5,},"disable-scroll": true,"all-outputs": true,                       /////|
+"warp-on-scroll": false,"format": "{icon}","format-icons": {                                         /////|
+"active": "<span font='20px'>󰮯</span>","default": "<span font='20px'>󰊠</span>"}},                    /////|
+//////////////////////////////////////////////////////////////////////////////////////////////////////////|
+
+//System Tray/////////////////////////////////////////////////////////////////////////////////////////////|
+"tray": {"spacing": 10 },                                                                            /////|
+//////////////////////////////////////////////////////////////////////////////////////////////////////////|
+
+//Clock-Spacer////////////////////////////////////////////////////////////////////////////////////////////|
+"custom/spacer1": {"format": "<span font='20px'>󰥔</span>", "tooltip": false},                        /////|
+//////////////////////////////////////////////////////////////////////////////////////////////////////////|
+//Clock///////////////////////////////////////////////////////////////////////////////////////////////////|
+"clock": {"format": "{:%H:%M:%S}", "interval": 1 },                                                  /////|
+//////////////////////////////////////////////////////////////////////////////////////////////////////////|
+
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+}
