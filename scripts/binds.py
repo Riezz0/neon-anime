@@ -18,7 +18,7 @@ class PixelPerfectShortcuts(Gtk.Window):
         colors = get_pywal_colors()
         
         # Window configuration
-        self.set_default_size(550, 400)  # Slightly wider for perfect alignment
+        self.set_default_size(300, 300)  # Slightly wider for perfect alignment
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_border_width(10)
         
