@@ -193,6 +193,19 @@ window#waybar {
   border-left: 2px solid @color10;
 }
 
+#custom-swaync {
+  background-color: @color0;
+  color: @color9;
+  padding-top: 0.3px;
+  padding-bottom: 0px;
+  padding-right: 15px;
+  padding-left: 11px;
+  border-radius: 5px;
+  border-bottom: 2px solid @color10;
+  border-top: 2px solid @color10;
+  border-right: 2px solid @color10;
+  border-left: 2px solid @color10;
+}
 
 #custom-salaat {
   background-color: @color0;
