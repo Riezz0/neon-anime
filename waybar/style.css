@@ -27,7 +27,36 @@ window#waybar {
     transition-duration: .5s;
 }
 
+#group-power {
+  background-color: @color0;
+  color: @color9;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid @color10;
+  border-top: 2px solid @color10;
+  border-left: 2px solid @color10;
+  border-right: 2px solid @color10;
+  border-radius: 5px;
 
+
+}
+#group-mail {
+  background-color: @color0;
+  color: @color9;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid @color10;
+  border-top: 2px solid @color10;
+  border-left: 2px solid @color10;
+  border-right: 2px solid @color10;
+  border-radius: 5px;
+
+
+}
 #workspaces {
   background-color: @color0;
   border-radius: 5px;
@@ -250,12 +279,26 @@ window#waybar {
   border-left: 2px solid @color10;
 }
 
-#custom-discord {
+#custom-quran {
   background-color: @color0;
   color: @color10;
   padding-top: 0.3px;
   padding-bottom: 0px;
-  padding-right: 21px;
+  padding-right: 15px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid @color10;
+  border-top: 2px solid @color10;
+  border-right: 2px solid @color10;
+  border-left: 2px solid @color10;
+}
+
+#custom-discord {
+  background-color: @color0;
+  color: @color10;
+  padding-top: 3px;
+  padding-bottom: 0px;
+  padding-right: 16px;
   padding-left: 10px;
   border-radius: 5px;
   border-bottom: 2px solid @color10;

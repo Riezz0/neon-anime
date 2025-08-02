@@ -6,10 +6,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 //Modules Alignment//////////////////////////////////////////////////////////////////////////////////////|
-"modules-left": ["custom/arch",
-"custom/salaat",
-"custom/whatsapp",
-"custom/discord",
+"modules-left": ["custom/arch","custom/salaat","custom/quran","custom/whatsapp","custom/discord"    /////|
+                                                                                                    /////|
 ],
 
 "modules-center": [
@@ -44,31 +42,37 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 //Swaync//////////////////////////////////////////////////////////////////////////////////////////////////|
-"custom/swaync": {"format": "<span font='24px'>󰍜</span>", "tooltip": false,			                     /////|
-"on-click": "swaync-client -t"},                                        								             /////|
+"custom/swaync": {"format": "<span font='24px'>󰍜</span>", "tooltip": false,			     /////|
+"on-click": "swaync-client -t"},                                        			     /////|
+//////////////////////////////////////////////////////////////////////////////////////////////////////////|
+
+//Quran///////////////////////////////////////////////////////////////////////////////////////////////////|
+"custom/quran": {"format": "<span font='24px'></span>", "tooltip": false,                           /////|
+"on-click": "bash ~/.config/scripts/quran.sh", "tooltip": true,                                      /////|
+"tooltip-format": "Quran\nLeft Click To Open\nLeft Click Again To Close" },                          /////|
 //////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 //WhatsApp////////////////////////////////////////////////////////////////////////////////////////////////|
 "custom/whatsapp": {"format": "<span font='24px'></span>", "tooltip": false,                        /////|
 "on-click": "bash ~/.config/scripts/wa.sh", "tooltip": true,                                         /////|
-"tooltip-format": "WhatsApp Scratchpad \nLeft Click To Open \nLeft Click Again To Close" },          /////|
+"tooltip-format": "WhatsApp\nLeft Click To Open\nLeft Click Again To Close" },                       /////|
 //////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 //Power-Menu//////////////////////////////////////////////////////////////////////////////////////////////|
 "custom/power": {"format": "<span font='24px'>󰈆</span>", "tooltip": false,                           /////|
 "on-click": "bash ~/.config/scripts/power.sh", "tooltip": true,                                      /////|
-"tooltip-format": "Power-Menu \nLeft Click To Open \nLeft Click Again To Close" },                   /////|
+"tooltip-format": "Power-Menu\nLeft Click To Open\nLeft Click Again To Close" },                     /////|
 //////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 
 //Discord/////////////////////////////////////////////////////////////////////////////////////////////////|
-"custom/discord": {"format": "<span font='24px'></span>", "tooltip": false,                         /////|
+"custom/discord": {"format": "<span font='24px'>󰙯</span>", "tooltip": false,                         /////|
 "on-click": "bash ~/.config/scripts/dc.sh", "tooltip": true,                                         /////|
-"tooltip-format": "Discord Scratchpad \nLeft Click To Open \nLeft Click Again To Close" },           /////|
+"tooltip-format": "Discord\nLeft Click To Open\nLeft Click Again To Close" },                        /////|
 //////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 //System Tray/////////////////////////////////////////////////////////////////////////////////////////////|
-"tray": {"spacing": 10, "icon-size": 30 },                                                                            /////|
+"tray": {"spacing": 10, "icon-size": 30 },                                                           /////|
 //////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 //Spacer//////////////////////////////////////////////////////////////////////////////////////////////////|

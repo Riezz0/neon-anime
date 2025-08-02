@@ -20,7 +20,7 @@ class PowerMenu(Gtk.Window):
         self.set_resizable(False)
         self.set_decorated(False)
         self.set_position(Gtk.WindowPosition.CENTER)
-        self.set_skip_taskbar_hint(True)
+        self.set_skip_taskbar_hint(False)
         
         # Apply styles
         self.apply_styles()
