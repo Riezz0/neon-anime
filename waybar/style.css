@@ -11,6 +11,13 @@ tooltip * {
   background-color: @color0;
   border-radius: 5px;
   text-shadow: none;
+  border: 0px solid transparent;
+}
+
+tooltip label {
+    color: @color7;
+    padding: 0px;
+    font-size: 12px;
 }
 
 window#waybar {
@@ -19,6 +26,7 @@ window#waybar {
     transition-property: background-color;
     transition-duration: .5s;
 }
+
 
 #workspaces {
   background-color: @color0;
@@ -173,16 +181,31 @@ window#waybar {
 
 #custom-arch {
   background-color: @color0;
-  color: @color9;
+  color: @color10;
   padding-top: 0.3px;
   padding-bottom: 0px;
   padding-right: 15px;
   padding-left: 9px;
   border-radius: 5px;
-  border-bottom: 2px solid @color9;
-  border-top: 2px solid @color9;
-  border-right: 2px solid @color9;
-  border-left: 2px solid @color9;
+  border-bottom: 2px solid @color10;
+  border-top: 2px solid @color10;
+  border-right: 2px solid @color10;
+  border-left: 2px solid @color10;
+}
+
+
+#custom-salaat {
+  background-color: @color0;
+  color: @color10;
+  padding-top: 0.3px;
+  padding-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid @color10;
+  border-top: 2px solid @color10;
+  border-right: 2px solid @color10;
+  border-left: 2px solid @color10;
 }
 
 #custom-whatsapp {
@@ -214,7 +237,16 @@ window#waybar {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: @color10;
+    border-radius: 5px; 
+    border-bottom: 2px solid @color10;
+    border-top: 2px solid @color10;
+    border-right: 2px solid @color10;
+    border-left: 2px solid @color10;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #tray > .passive {
