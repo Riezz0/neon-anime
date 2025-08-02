@@ -1,0 +1,35 @@
+@import "~/.cache/wal/colors.css"
+
+configuration {
+    font: "Material Design Icons 24";
+    location: 2;  // Position right
+    x-offset: -20;
+    y-offset: 0;
+    width: 60px;
+    lines: 4;
+    padding: 20px;
+    orientation: vertical;
+}
+
+* {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element {
+    padding: 8px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+element selected {
+    background-color: @color1;
+}
+
+element urgent {
+    background-color: @color5;
+}
+
+element active {
+    background-color: @color2;
+}

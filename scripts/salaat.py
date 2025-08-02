@@ -59,7 +59,7 @@ def format_output(prayer_times):
     next_prayer = next_prayer or prayers[0]  # After Isha shows Fajr next
     
     return {
-        'text': f" {current[0]}: {current[1]} | Next: {next_prayer[0]}: {next_prayer[1]}",
+        'text': f"  {current[0]}: {current[1]} | Next: {next_prayer[0]}: {next_prayer[1]}",
         'tooltip': "\n".join([f"{p}: {t}" for p, t in prayer_times.items() if p in prayers_order]),
         'class': 'prayer-times'
     }

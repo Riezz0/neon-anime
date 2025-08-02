@@ -35,6 +35,7 @@ yay -S --needed --noconfirm \
   swaync \
 	wl-clipboard \
 	firefox \
+  chromium \
 	nemo \
 	nwg-look \
 	python-pywal16 \
