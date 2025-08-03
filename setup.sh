@@ -62,7 +62,8 @@ yay -S --needed --noconfirm \
   xfce-polkit \
 	exa \
 	rofi-wayland \
-  goverlay-git
+  goverlay-git \
+  neovim
 
 #-----AUR-Package-Update-----#
 echo "Checking For Updates For Newly Installed Packges"

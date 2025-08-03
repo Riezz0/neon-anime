@@ -138,7 +138,7 @@ class PixelPerfectShortcuts(Gtk.Window):
                     grid.attach(lbl_desc, 1, i, 1, 1)
 
         # Apply monospace font to everything
-        font_desc = Pango.FontDescription("RobotoMono Nerd Font 10")
+        font_desc = Pango.FontDescription("Jetbrains Mono Nerd Font 12")
         def apply_font(widget):
             if isinstance(widget, Gtk.Label):
                 widget.override_font(font_desc)
