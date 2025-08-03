@@ -85,10 +85,10 @@ cp -r /home/$USER/dots/omz/zsh-syntax-highlighting/ ~/.oh-my-zsh/custom/plugins/
 echo "Symlinking Configs"
 sleep 3
 
-ln -s /home/$USER/dots/.zshrc /home/$USER/
 rm -rf /home/$USER/dots/omz/
 rm -rf /home/$USER/.config/hypr
 rm -rf /home/$USER/.config/kitty
+ln -s /home/$USER/dots/.zshrc /home/$USER/
 ln -s /home/$USER/dots/fastfetch/ /home/$USER/.config/
 ln -s /home/$USER/dots/gtk-3.0/ /home/$USER/.config/
 ln -s /home/$USER/dots/gtk-4.0/ /home/$USER/.config/
