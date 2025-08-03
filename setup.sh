@@ -40,7 +40,7 @@ yay -S --needed --noconfirm \
 	zsh \
 	ttf-jetbrains-mono-nerd \
 	ttf-font-awesome \
-	ttf-font-awesome-4 \
+	ttf-font-awesome-4 \:
 	ttf-font-awesome-5 \
 	waybar \
 	rust \
@@ -50,9 +50,11 @@ yay -S --needed --noconfirm \
 	pavucontrol \
 	waybar-module-pacman-updates-git \
 	python-pip \
+  python-psutil \
 	python-virtualenv \
 	python-gobject \
 	xfce4-settings \
+  xfce-polkit \
 	exa \
 	rofi-wayland \
   goverlay-git
