@@ -57,6 +57,7 @@ yay -S --needed --noconfirm \
 	python-pip \
   python-psutil \
 	python-virtualenv \
+  python-requests \
 	python-gobject \
 	xfce4-settings \
   xfce-polkit \
