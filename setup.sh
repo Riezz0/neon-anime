@@ -106,6 +106,7 @@ ln -s /home/$USER/dots/fastfetch/ /home/$USER/.config/
 ln -s /home/$USER/dots/gtk-3.0/ /home/$USER/.config/
 ln -s /home/$USER/dots/gtk-4.0/ /home/$USER/.config/
 ln -s /home/$USER/dots/hypr/ /home/$USER/.config/
+ln -s /home/$USER/dots/swaync/ /home/$USER/.config/
 ln -s /home/$USER/dots/kitty/ /home/$USER/.config/
 ln -s /home/$USER/dots/nvim/ /home/$USER/.config/
 ln -s /home/$USER/dots/rofi/ /home/$USER/.config/
