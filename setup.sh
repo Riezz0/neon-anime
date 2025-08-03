@@ -19,6 +19,11 @@ else
     echo "yay is already installed (version: $(yay --version | head -n 1))."
 fi
 
+#-----Sys-Update-----#
+echo "Updating The System"
+sleep 3
+yay -Syyu --noconfirm
+
 #-----AUR-----#
 echo "Installing AUR Packages"
 sleep 3
@@ -59,6 +64,10 @@ yay -S --needed --noconfirm \
 	rofi-wayland \
   goverlay-git
 
+#-----AUR-Package-Update-----#
+echo "Checking For Updates For Newly Installed Packges"
+sleep 3
+yay -Syyu --noconfirm
 
 #-----Oh-My-Zsh-----#
 echo "Installing Oh-My-Zsh"
