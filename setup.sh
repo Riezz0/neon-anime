@@ -40,7 +40,7 @@ yay -S --needed --noconfirm \
 	zsh \
 	ttf-jetbrains-mono-nerd \
 	ttf-font-awesome \
-	ttf-font-awesome-4 \:
+	ttf-font-awesome-4 \
 	ttf-font-awesome-5 \
 	waybar \
 	rust \

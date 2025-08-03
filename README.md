@@ -7,7 +7,7 @@ Installation:
 
 1. Clone the repo: 
 ```bash
-git clone git@github.com:Riezz0/neon-anime.git /home/$USER/dots/
+git clone https://github.com/Riezz0/neon-anime.git
 ```
 2. Change executeable permissions
 ```
