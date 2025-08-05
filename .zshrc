@@ -6,6 +6,8 @@ fastfetch
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+
+
 # Theme
 ZSH_THEME="robbyrussell"
 

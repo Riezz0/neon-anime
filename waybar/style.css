@@ -291,6 +291,19 @@ window#waybar {
   border-left: 2px solid @color10;
 }
 
+#custom-aur {
+  background-color: @color0;
+  color: @color10;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 16px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid @color10;
+  border-top: 2px solid @color10;
+  border-right: 2px solid @color10;
+  border-left: 2px solid @color10;
+}
 #tray {
     background-color: @color10;
     border-radius: 5px; 

@@ -6,8 +6,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 //Modules Alignment//////////////////////////////////////////////////////////////////////////////////////|
-"modules-left": ["custom/arch","custom/salaat","custom/quran","custom/whatsapp","custom/discord"    /////|
-                                                                                                    /////|
+"modules-left": ["custom/arch","custom/salaat","custom/quran","custom/whatsapp","custom/discord",   /////|
+"custom/aur"    /////|
 ],
 
 "modules-center": [
@@ -25,6 +25,18 @@
 "clock",
 "custom/power",
 "tray"],
+
+/////AUR//////////////////////////////////////////////////////////////////////////////////////////////////|
+"custom/aur": {											                                                                 /////|
+"format": "{} {icon}",    										                                                       /////|
+"return-type": "json",										                                                           /////|
+"format-icons": {											                                                               /////|
+"has-updates": "<span font='20px'>󱝣</span>",								                                         /////|
+"updated": "<span font='20px'>󱝍</span>"},								                                             /////|
+"on-click": "~/.config/scripts/updates.sh",								                                           /////|
+"exec-if": "which waybar-module-pacman-updates",							                                       /////|
+"exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"},		     /////|
+//////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 //Salaat-Times////////////////////////////////////////////////////////////////////////////////////////////|
 "custom/salaat": {"exec": "python ~/.config/scripts/salaat.py", "return-type": "json",               /////|
