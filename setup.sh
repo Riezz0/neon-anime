@@ -40,6 +40,7 @@ yay -S --needed --noconfirm \
   chromium \
 	nemo \
 	nwg-look \
+  nwg-displays \
 	python-pywal16 \
 	python-pywalfox \
 	zsh \
