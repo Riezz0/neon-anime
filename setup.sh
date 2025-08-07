@@ -65,7 +65,10 @@ yay -S --needed --noconfirm \
 	exa \
 	rofi-wayland \
   goverlay-git \
-  neovim
+  neovim \
+  coolercontrol-bin \
+  linux-zen-headers 
+
 
 #-----AUR-Package-Update-----#
 echo "Checking For Updates For Newly Installed Packges"
@@ -139,6 +142,9 @@ gsettings set org.gnome.desktop.interface document-font-name "Jetbrains Mono Ner
 gsettings set org.gnome.desktop.interface monospace-font-name "Jetbrains Mono Nerd Font 11"
 gsettings set org.gnome.desktop.wm.preferences titlebar-font "Jetbrains Mono Nerd Font 11"
 sudo cp -r /home/$USER/dots/sys/lightdm/ /etc/
+
+sudo echo "blacklist nct6683" >> /etc/modprobe.d/no_nct6683.conf
+modprobe nct6687
 
 wal -i ~/.config/hypr/bg/bg.jpg
 
