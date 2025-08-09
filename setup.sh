@@ -54,6 +54,7 @@ yay -S --needed --noconfirm \
 	fastfetch \
 	cmatrix \
 	pavucontrol \
+  net-tools \
 	waybar-module-pacman-updates-git \
 	python-pip \
   python-psutil \
@@ -143,13 +144,16 @@ gsettings set org.gnome.desktop.interface monospace-font-name "Jetbrains Mono Ne
 gsettings set org.gnome.desktop.wm.preferences titlebar-font "Jetbrains Mono Nerd Font 11"
 sudo cp -r /home/$USER/dots/sys/lightdm/ /etc/
 
-sudo echo "blacklist nct6683" >> /etc/modprobe.d/no_nct6683.conf
-modprobe nct6687
-
 wal -i ~/.config/hypr/bg/bg.jpg
 
 echo "Installation Complete !!!"
 echo "Rebooting The System"
+
+sudo touch /etc/modprobe.d/no_nct6683.conf
+sudo echo "blacklist nct6683" >> /etc/modprobe.d/no_nct6683.conf
+sudo touch /etc/modprobe.d/nct6687.conf
+sudo echo "nct6687" >> /etc/modules-load.d/nct6687.conf
+sudo modprobe nct6687
 
 sleep 3
 sudo systemctl reboot
