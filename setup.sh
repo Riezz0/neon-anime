@@ -38,6 +38,7 @@ yay -S --needed --noconfirm \
 	wl-clipboard \
 	firefox \
   chromium \
+  code \
 	nemo \
 	nwg-look \
   nwg-displays \

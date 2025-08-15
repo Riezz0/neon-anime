@@ -1,48 +1,30 @@
 #!/bin/bash
 
-# Get AMD GPU stats
-get_stats() {
-    # Temperature
-    temp=$(sensors | grep -m1 "edge" | awk '{print $2}' | tr -d '+°C')
-    
-    # GPU Usage (sysfs)
-    usage=$(cat /sys/class/drm/card0/device/gpu_busy_percent 2>/dev/null || echo "N/A")
-    
-    # VRAM Usage (sysfs)
-    vram_used=$(awk '{print $1/1048576}' /sys/class/drm/card0/device/mem_info_vram_used 2>/dev/null)
-    vram_total=$(awk '{print $1/1048576}' /sys/class/drm/card0/device/mem_info_vram_total 2>/dev/null)
-    
-    # Fan Speed
-    fan=$(sensors | grep -m1 "fan" | awk '{print $2}')
-    
-    # Clock Speed
-    clock=$(cat /sys/class/drm/card0/device/pp_dpm_sclk 2>/dev/null | grep "*" | cut -d':' -f2 | cut -d' ' -f2)
-    
-    # Format output
-    echo -en "\0message\x1f<b>AMD GPU Stats</b>\n"
-    echo "  Temperature: $temp°C"
-    echo "  GPU Usage: $usage%"
-    echo "  VRAM: ${vram_used:-N/A}/${vram_total:-N/A} GiB"
-    echo "  Fan: ${fan:-N/A} RPM"
-    echo "龍 Clock: ${clock:-N/A} MHz"
+# Get GPU stats for AMD RX 6750 XT (no radeontop/rocm-smi)
+get_gpu_stats() {
+    # 1. GPU Load (from sysfs)
+    GPU_LOAD=$(cat /sys/class/drm/card0/device/gpu_busy_percent 2>/dev/null || echo "N/A")
+    [[ "$GPU_LOAD" != "N/A" ]] && GPU_LOAD="$GPU_LOAD%"
+
+    # 2. VRAM Usage (from sysfs)
+    VRAM_TOTAL=$(cat /sys/class/drm/card0/device/mem_info_vram_total 2>/dev/null | awk '{printf "%.1f GB", $1/1024/1024/1024}')
+    VRAM_USED=$(cat /sys/class/drm/card0/device/mem_info_vram_used 2>/dev/null | awk '{printf "%.1f GB", $1/1024/1024/1024}')
+    VRAM_USAGE="${VRAM_USED:-N/A} / ${VRAM_TOTAL:-N/A}"
+
+    # 3. Temperature (via sensors)
+    TEMP=$(sensors | grep -A 2 "amdgpu" | grep "edge" | awk '{print $2}' || echo "N/A")
+
+    # 4. Core Clock (from sysfs)
+    CORE_CLK=$(cat /sys/class/drm/card0/device/pp_dpm_sclk 2>/dev/null | grep "*" | awk '{print $2}' | sed 's/Mhz//')
+    CORE_CLK="${CORE_CLK:-N/A} MHz"
+
+    echo -e "GPU Load: $GPU_LOAD\nVRAM: $VRAM_USAGE\nTemp: $TEMP\nCore Clock: $CORE_CLK"
 }
 
-# Display in Rofi
-get_stats | rofi -dmenu -p "GPU" -theme-str '
-* {
-    font: "Fira Code 12";
-    text-color: #f8f8f2;
-}
-window {
-    background-color: #282a36;
-    border-radius: 8px;
-}
-listview {
-    lines: 5;
-    fixed-height: true;
-}
-message {
-    margin: 8px;
-    padding: 8px;
-    border-bottom: 1px solid #44475a;
-}'
+# Display in Yad
+yad --title="AMD RX 6750 XT Stats" \
+    --text="$(get_gpu_stats)" \
+    --width=300 \
+    --height=200 \
+    --button="Close" \
+    --text-align=left

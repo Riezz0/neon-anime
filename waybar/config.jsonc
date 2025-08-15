@@ -2,7 +2,7 @@
 {"height": 30, "spacing": 4,                                                                        /////|  
 "output": "DP-2",                                                                                   /////|
 "margin-top": 5,                                                                                    /////|
-"margin-left": 5,                                                                                   /////|
+"margin-left": 4,                                                                                   /////|
 "margin-right": 5,                                                                                  /////|
 /////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
@@ -38,7 +38,7 @@
 "format": "{} {icon}",    										                                                       /////|
 "return-type": "json",										                                                           /////|
 "format-icons": {											                                                               /////|
-"has-updates": "Updates Available",								                                                   /////|
+"has-updates": "Update/s Available",							                                                   /////|
 "updated": "Updates"},								                                                               /////|
 "on-click": "~/.config/scripts/updates.sh",								                                           /////|
 "exec-if": "which waybar-module-pacman-updates",							                                       /////|
