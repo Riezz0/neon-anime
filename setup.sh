@@ -150,12 +150,6 @@ wal -i ~/.config/hypr/bg/bg.jpg
 echo "Installation Complete !!!"
 echo "Rebooting The System"
 
-sudo touch /etc/modprobe.d/no_nct6683.conf
-sudo echo "blacklist nct6683" >> /etc/modprobe.d/no_nct6683.conf
-sudo touch /etc/modprobe.d/nct6687.conf
-sudo echo "nct6687" >> /etc/modules-load.d/nct6687.conf
-sudo modprobe nct6687
-
 sleep 3
 sudo systemctl reboot
 
