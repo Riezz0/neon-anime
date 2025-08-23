@@ -68,7 +68,6 @@ yay -S --needed --noconfirm \
 	rofi-wayland \
   goverlay-git \
   neovim \
-  coolercontrol-bin \
   linux-zen-headers 
 
 

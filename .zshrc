@@ -1,7 +1,7 @@
 # Startup Commands
 #fastfetch --kitty-direct /home/$USER/.config/fastfetch/ArchLinux.png --logo-width 22 --logo-height 10 --logo-padding-top 5 --logo-padding-left 2
 
-fastfetch
+fastfetch --logo-padding-left 3 --logo-padding-top 3
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
